@@ -1,6 +1,6 @@
 #Pico-Secure-Delivery-Box made by (woodycal @ github)(u/sac2727 @ reddit)
 #The code for asynchronous-web-server-micropython by https://randomnerdtutorials.com/raspberry-pi-pico-w-asynchronous-web-server-micropython/
-#
+
 # Import necessary modules
 import network
 import socket
@@ -84,37 +84,34 @@ def init_wifi(ssid, password):
     # Wait for Wi-Fi connection
     connection_timeout = 10
     while connection_timeout > 0:
-        print(wlan.status())
+        #print(wlan.status())
         if wlan.status() >= 3:
             break
         connection_timeout -= 1
-        print('Waiting for Wi-Fi connection...')
+        #print('Waiting for Wi-Fi connection...')
         time.sleep(1)
     # Check if connection is successful
     if wlan.status() != 3:
-        print('Failed to connect to Wi-Fi')
+        #print('Failed to connect to Wi-Fi')
         return False
     else:
-        print('Connection successful!')
+        #print('Connection successful!')
         network_info = wlan.ifconfig()
-        print('IP address:', network_info[0])
+        #print('IP address:', network_info[0])
         return True
 
 # Asynchronous functio to handle client's requests
 async def handle_client(reader, writer):
     global state
-    global dropboxvalue
     
-    print("Client connected")
+    #print("Client connected")
     request_line = await reader.readline()
-    print('Request:', request_line)
     
     # Skip HTTP request headers
     while await reader.readline() != b"\r\n":
         pass
     
     request = str(request_line, 'utf-8').split()[1]
-    print('Request:', request)
     
     # Process the request and update variables
     if request == '/ARMED?':
@@ -122,7 +119,6 @@ async def handle_client(reader, writer):
     elif request == '/DISARMED?':
         state = 'DISARMED'
     elif request == '/DROPOFFMODE?':
-        print('DROPOFFMODE ACTIVE')
         state = 'DROPOFFMODE'
         dropboxvalue = 0
         relay_lock.value(1)
@@ -146,7 +142,7 @@ async def handle_client(reader, writer):
     writer.write(response)
     await writer.drain()
     await writer.wait_closed()
-    print('Client Disconnected')
+    #print('Client Disconnected')
 
 #logic for controlling box status modes
 async def Boxstatus():
@@ -163,16 +159,12 @@ async def Boxstatus():
         if startupcount == 4:
             state = "DISARMED"
     elif state == 'ARMED':
-        print('Box is Armed')
         relay_lock.value(0)
         if box_sensor.value() or box_sensor1.value() == 1:
             relay_siren.value(1)
-            print('sensor value changed')
         elif vibration_sensor.value() == 1:
-            print("Vibration detected!")
             vibrationcount += 1
             if vibrationcount == 6:
-                print("alarm trigger")
                 relay_lock.value(0)
                 relay_siren.value(1)
     elif state == 'DISARMED':
@@ -180,21 +172,18 @@ async def Boxstatus():
             relay_lock.value(1)
             time.sleep(2)
     elif state == 'DROPOFFMODE':
-        print('dropoffmode')
         if box_sensor.value() or box_sensor1.value() == 1:
-            print('startbox')
             time.sleep(180)
-            print('box activated')
             state = "ARMED"
             
                     
 async def main():    
     if not init_wifi(ssid, password):
-        print('Exiting program.')
+        #print('Exiting program.')
         return
     
     # Start the server and run the event loop
-    print('Setting up server')
+    #print('Setting up server')
     server = asyncio.start_server(handle_client, "0.0.0.0", 80)
     asyncio.create_task(server)
     
@@ -202,7 +191,6 @@ async def main():
         # Add other tasks that you might need to do in the loop
         await asyncio.sleep(5)
         asyncio.create_task(Boxstatus())
-        print('This message will be printed every 5 seconds')
         
 
 # Create an Event Loop
@@ -215,6 +203,6 @@ try:
     # Run the event loop indefinitely
     loop.run_forever()
 except Exception as e:
-    print('Error occured: ', e)
+    #print('Error occured: ', e)
 except KeyboardInterrupt:
-    print('Program Interrupted by the user')
+    #print('Program Interrupted by the user')
