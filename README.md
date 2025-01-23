@@ -1,4 +1,4 @@
-# pico-secure-delivery-box
+# pico secure delivery box
 ![How to build your own secure delivery box using a raspberry pi pico](Building-box/IMG_20250123_120316757.jpg)
 
 Please note I'm not professional programmer so if my code looks beginner it's because it is!. Designed to be simple and easy to understand with alot options to add to it.
@@ -10,7 +10,7 @@ Please note I'm not professional programmer so if my code looks beginner it's be
 ### 1 SW 420 vibration sensor
 ### 1 BME 280 Temperature, Pressure, Humidity sensor
 ### 2 Magnetic Door Contact Reed Switchs
-### 1 Electric Drop Bolt Lock
+### 1 12v Electric Drop Bolt Lock
 ### 12v siren
 ### 12v battery
 
@@ -34,3 +34,5 @@ This is all done through web browser while connected to your local internet.
 ![Example](Building-box/phoneshot.png)
 
 If you need outside access ie not on home network I would advise a secure VPN of some kind to access your home network. This wasn't designed for being open to internet as I block my iot devices from internet.
+
+Detailed guide how to build your own secure delievery box from scratch [Click here](#Building-box/README.md)
