@@ -1,7 +1,7 @@
 # pico-secure-delivery-box
-How to build your own secure delivery box using a raspberry pi pico.
+![How to build your own secure delivery box using a raspberry pi pico](Building-box/IMG_20250123_120316757.jpg)
 
-Please note I'm not professional programmer so if my code looks beginner it's because it is!. This was a project I've been wanting to do for a few years and finally got round to it.
+Please note I'm not professional programmer so if my code looks beginner it's because it is!. Designed to be simple and easy to understand with alot options to add to it.
 
 Item list:
 
@@ -16,6 +16,10 @@ Pico w or Pico 2w (Needs WiFi).
 2 Magnetic Door Contact Reed Switchs.
 
 1 Electric Drop Bolt Lock.
+
+12v siren
+
+12v battery.
 
 Software: Micropython version 1.25.0 (https://micropython.org/resources/firmware/RPI_PICO2_W-20250119-v1.25.0-preview.217.gb4f53a0e5.uf2) and thonny for uploading the following files to Pico (main.py and bme280.py)
 
