@@ -11,5 +11,5 @@ This guide is from start to finish how i went about building the box and some th
 ![Layout](layout.jpg)
 
 ## Step 1 Building the frames
-![The frames]() 
+![The frames](build_the_frames.jpg) 
 
