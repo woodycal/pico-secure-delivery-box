@@ -30,6 +30,7 @@ Before you upload main.py make sure you change in main.py the WiFi credentials t
 
 ## How to control the box
 
-The box is all done from your local network so you will have to find out it's IP address on your home network then in a browser type that address to access it. Please make sure you fix the IP address vie your router so static not dynamic.
+This is all done through web browser while connected to your local internet.
+!(Building-box/phoneshot.png)
 
 If you need outside access ie not on home network I would advise a secure VPN of some kind to access your home network. This wasn't designed for being open to internet as I block my iot devices from internet.
