@@ -3,31 +3,24 @@
 
 Please note I'm not professional programmer so if my code looks beginner it's because it is!. Designed to be simple and easy to understand with alot options to add to it.
 
-Item list:
+##Item list:
 
-Pico w or Pico 2w (Needs WiFi).
-
-2 relay modules.
-
-1 SW 420 vibration sensor.
-
-1 BME 280 Temperature, Pressure, Humidity sensor.
-
-2 Magnetic Door Contact Reed Switchs.
-
-1 Electric Drop Bolt Lock.
-
+Pico w or Pico 2w (Needs WiFi)
+2 relay modules
+1 SW 420 vibration sensor
+1 BME 280 Temperature, Pressure, Humidity sensor
+2 Magnetic Door Contact Reed Switchs
+1 Electric Drop Bolt Lock
 12v siren
-
-12v battery.
+12v battery
 
 Software: Micropython version 1.25.0 (https://micropython.org/resources/firmware/RPI_PICO2_W-20250119-v1.25.0-preview.217.gb4f53a0e5.uf2) and thonny for uploading the following files to Pico (main.py and bme280.py)
 
-INSTRUCTIONS
+##INSTRUCTIONS
 
 Before you upload main.py make sure you change in main.py the WiFi credentials to your home network ssid and password and any variations in the pin outs etc.
 
-The modes
+###The modes
 
 ARMED: This mode arms the box which locks it and goes into protection mode so if either box sensors tripped or their is a maximum of 6 vibrations counted this will activate the siren.
 
