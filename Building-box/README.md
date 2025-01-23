@@ -55,5 +55,11 @@ Measure felt out so that it covers the top as well as the side cladding.
 
 This stage can be tricky to do if weather is cold like it was in uk when i did this as felt isnt very bendy during cold temperatures and is likely to rip when folding hence why i brought this inside. Make sure you keep the felt taught as possible to reduce bubbling. Bubbling your see on second picture front but it doesnt matter to much around sides as we will clad these again which will cover them up plus the folds.
 
+## Step 11 Installing Electric Drop Bolt Lock 12v
+![Installing drop bolt lock](picobox2.jpg)
 
+This stage can be tricky depending on type lock you get. I got electric drop bolt lock 12v from amazon which came in two parts [Amazon link](https://www.amazon.co.uk/LIBO-Electric-Electronic-Control-Security/dp/B07DW17J3Q/ref=sr_1_3?crid=3IMLO5TY7DW8C&dib=eyJ2IjoiMSJ9.hp2-itwyPUYHBJkAGXtzGxl7cBORglDBRUbYQpckPmc9WOuCHS1eXhC6ao8Yo6jCnItKoFeXaxsLDI9x0FOoczluv7sMgIcYGWtJ3Rzg98wND53W8JTD2CmEj2bEbKm1wl87hja0fNYtyToEtqWZSImI0eUMZtIWXg78s6UZm0SwW9PhYKXOubZoEPymGDgl2R3VeDV7jQN-EwN_8hxK6gqQQD8cuNf6WY_5Svq2c-ml-kG4rfwiejUSuTVRsCRkVPt7G3zcD3Eg0r-zuU_sxQHwqYaZiab0ZEOYoB-1H33oisJFurZfUgSz7PWrY2VXm-xuJ9r13BwGC7LCZtCJ5Q-tbDGtYkTdPOawtP_ydbUOnxM0t7EHgJyOKrLL1HeH2t3r9AjHXSWdzG3ewiGYn5-CPKJAPxeEOVc4tHjU0SD-H-a1pew6RCmiIraZKoqn.DI0taTb2DdbJ4WJ4xTMYhRsks2dMf-DbFepCZLddo_4&dib_tag=se&keywords=Electronic+dropbolt+lock+12v&qid=1737649583&sprefix=electronic+dropbolt+lock+12v%2Caps%2C76&sr=8-3). I installed an extra piece wood so electronic part of lock is set back and screwed on.
+
+![installing drop bolt lock part 2](plate_for_lock.jpg)
+I took the second part of the lock apart to use the plate because the lock doesnt work without the magnet in place. I screwed this on to box and drilled out the hole so the drop bolt can extend into the frame.
 
