@@ -66,10 +66,9 @@ def webpage(weather_value, state):
             <br>
             <b style="color:DarkRed;">DISARMED:</b><strong>      This mode disarms the box as well as unlocks(Acts as service mode).<strong>
             <br>
-            <b style="color:DarkRed;">DROPOFFMODE:</b><strong>      This mode waits for box to be opened. Once opened a 60 second timer activates after which locks the box and sets the alarm.<strong>
+            <b style="color:DarkRed;">DROPOFFMODE:</b><strong>      This mode waits for box to be opened. Once opened a 180 second timer activates after which sets to ARMED mode(locks box sets alarm)<strong>
             <br>
-            <p>Many thanks to this guide using asynchronous-web-server <a href="https://randomnerdtutorials.com/raspberry-pi-pico-w-asynchronous-web-server-micropython">This guide</a></p>
-            <p>For future updates please check my github page.</p>
+            <p>For future updates please check my github page <a href="https://github.com/woodycal/pico-secure-delivery-box">Here</a></p>
         </body>
         </html>
         """
@@ -84,27 +83,21 @@ def init_wifi(ssid, password):
     # Wait for Wi-Fi connection
     connection_timeout = 10
     while connection_timeout > 0:
-        #print(wlan.status())
         if wlan.status() >= 3:
             break
         connection_timeout -= 1
-        #print('Waiting for Wi-Fi connection...')
         time.sleep(1)
     # Check if connection is successful
     if wlan.status() != 3:
-        #print('Failed to connect to Wi-Fi')
         return False
     else:
-        #print('Connection successful!')
         network_info = wlan.ifconfig()
-        #print('IP address:', network_info[0])
         return True
 
 # Asynchronous functio to handle client's requests
 async def handle_client(reader, writer):
     global state
     
-    #print("Client connected")
     request_line = await reader.readline()
     
     # Skip HTTP request headers
@@ -142,7 +135,6 @@ async def handle_client(reader, writer):
     writer.write(response)
     await writer.drain()
     await writer.wait_closed()
-    #print('Client Disconnected')
 
 #logic for controlling box status modes
 async def Boxstatus():
@@ -179,11 +171,9 @@ async def Boxstatus():
                     
 async def main():    
     if not init_wifi(ssid, password):
-        #print('Exiting program.')
         return
     
     # Start the server and run the event loop
-    #print('Setting up server')
     server = asyncio.start_server(handle_client, "0.0.0.0", 80)
     asyncio.create_task(server)
     
