@@ -35,4 +35,4 @@ This is all done through web browser while connected to your local internet.
 
 If you need outside access ie not on home network I would advise a secure VPN of some kind to access your home network. This wasn't designed for being open to internet as I block my iot devices from internet.
 
-Detailed guide how to build your own secure delievery box from scratch [Click here](#/Building-box/README.md)
+Detailed guide how to build your own secure delievery box from scratch [Click here](Building-box/README.md)
