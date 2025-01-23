@@ -79,4 +79,4 @@ The drop bolt lock and siren work from 12v supply and using the relays to contro
 Powering the pico i got 12v to 5v dc to dc converter which is on its own circuit to 12v battery.
 
 ![Layout](layout.jpg)
-Here is layout. This stage you can also do finishing touches like installing a handle setting up soft close lid hinge to reduce slamming/shaking, lid ratting, lose wires. having the soft close lid hinge also stops them opening the box right up or leaning it against a wall not closing.
+Here is layout. This stage you can also do finishing touches like installing a handle setting up soft close lid hinge to reduce slamming/shaking, lid ratting, lose wires. having the soft close lid hinge also stops them opening the box right up or leaning it against a wall not closing. It's also worth considering using anchor bolts of some kind so people don't actually take the whole box.
