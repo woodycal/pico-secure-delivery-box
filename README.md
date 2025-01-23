@@ -1,7 +1,9 @@
-# pico secure delivery box
+# Pico Secure Delivery Box
 ![How to build your own secure delivery box using a raspberry pi pico](Building-box/IMG_20250123_120316757.jpg)
 
-Please note I'm not professional programmer so if my code looks beginner it's because it is!. Designed to be simple and easy to understand with alot options to add to it.
+![Box image 2](Building-box/IMG_20250123_120335198.jpg)
+
+Please note I'm not professional programmer im a beginner hobbyist!. Designed to be simple and easy to understand with alot potential to grow.
 
 ## Item list:
 
