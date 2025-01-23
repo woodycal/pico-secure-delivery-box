@@ -3,7 +3,7 @@
 
 ![Box image 2](Building-box/IMG_20250123_120335198.jpg)
 
-Please note I'm not professional programmer im a beginner hobbyist!. Designed to be simple and easy to understand with alot potential to grow.
+Please note I'm not professional programmer im a beginner hobbyist!. Designed to be simple and easy to understand with alot potential to grow. Originally wanted cameras and a keypad but realistically delivery drivers just want to drop your parcel off as quick as possible so drop box is more realistic.
 
 ## Item list:
 
@@ -23,21 +23,22 @@ Software: Micropython version 1.25.0 (https://micropython.org/resources/firmware
 Before you upload main.py make sure you change in main.py the WiFi credentials to your home network ssid and password and any variations in the pin outs etc.
 ### Upload
 main.py
+
 BME280.py
 
 ## The Modes
 
 ### ARMED: This mode arms the box which locks it and goes into protection mode so if either box sensors tripped or their is a maximum of 6 vibrations counted this will activate the siren.
 
-### DISARMED: This mode deactivates all sensors as well as releasing the lock to open the box.
+### DISARMED: This mode deactivates all sensors as well as releasing the lock to open the box. If wired correctly if someone unplugged Pico going to get loud surprise.
 
-### DROPOFFMODE: This mode starts off unlocked but once the box sensor is tripped (box opened) it starts a countdown 3 mins after which it goes into armed mode so locks the box and activates sensors/vibration sensor. if either are tripped siren activates.
+### DROPOFFMODE: This mode starts off unlocked but once the box sensor is tripped (box opened) it starts a countdown 3 mins (180secs) after which it goes into armed mode so locks the box and activates sensors.
 
 ## How to control the box
 
 This is all done through web browser while connected to your local internet.
 ![Example](Building-box/phoneshot.png)
 
-If you need outside access ie not on home network I would advise a secure VPN of some kind to access your home network. This wasn't designed for being open to internet as I block my iot devices from internet.
+If you need outside access ie not on home network I would advise a secure VPN of some kind to access your home network. This wasn't designed for being open to internet as I block my iot devices from internet but can use them locally.
 
 Detailed guide how to build your own secure delievery box from scratch [Click here](Building-box/README.md)
