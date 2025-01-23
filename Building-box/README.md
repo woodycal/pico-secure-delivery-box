@@ -36,5 +36,24 @@ Make sure if you go down a wooden route you use ring shank nails as wood when it
 ![Install Hinges](install_hinges.jpg)
 This is the point you install the hinges and top and if you were like me and got carried away cladding the whole box your have to take back of the cladding off!!! WASNT EASY not the way i cladded it on!.
 
+## Step 7 Finish the cladding
+![Finish cladding](finish_cladding.jpg)
+This is where you finish the cladding off on the back making sure to cover up the hidge screws on bottom section of the hidge but also making sure its not too high that it stops your lid opening. Remeber we dont want the top to open to far back so if delievery driver leaves it it doesnt spring back shut. I used standard door hindges for this.
+
+## Step 8 Cladding top and paint
+![Cladding top and paint](cladding_top.jpg)
+For the top i used once again tongue and groove boards then i went round the edges cladding so that the felt has got nice smooth area to nail to but also to cover up the screws on top part hindges. During this stage you can use any type board mdf or plywood sheets as this section will be felted.
+
+## Step 9 Cutting the felt
+![Cutting the felt](felt.jpg)
+Measure felt out so that it covers the top as well as the side cladding.
+
+## Step 10 Nailing felt and folding
+![Folding felt](folding.jpg)
+
+![Nailing](folding_2.jpg)
+
+This stage can be tricky to do if weather is cold like it was in uk when i did this as felt isnt very bendy during cold temperatures and is likely to rip when folding hence why i brought this inside. Make sure you keep the felt taught as possible to reduce bubbling. Bubbling your see on second picture front but it doesnt matter to much around sides as we will clad these again which will cover them up plus the folds.
+
 
 
