@@ -2,6 +2,11 @@
 
 This guide is from start to finish how i went about building the box and some the issues i came across as well as helpful tips. Professionally i am landscape gardener so building side was easy but i did do a couple mistakes along the process building as its something i have never done.
 
+![](Building-box/IMG_20250123_120316757.jpg)
+![](Building-box/IMG_20250123_120321885.jpg)
+![](Building-box/IMG_20250123_120335198.jpg)
+![](Building-box/layout.jpg)
+
 ## Step 1 Building the frames
-![The frames](folding.jpg) 
+![The frames]() 
 
