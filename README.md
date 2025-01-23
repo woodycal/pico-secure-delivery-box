@@ -21,6 +21,9 @@ Software: Micropython version 1.25.0 (https://micropython.org/resources/firmware
 ## INSTRUCTIONS
 
 Before you upload main.py make sure you change in main.py the WiFi credentials to your home network ssid and password and any variations in the pin outs etc.
+### Upload
+main.py
+BME280.py
 
 ## The Modes
 
