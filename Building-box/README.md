@@ -68,7 +68,7 @@ Iv tested this lock its insanely strong. Also note it comes with 4 wires but in 
 
 ## Step 12 Test your setup
 ![Test your setup](test_setup.jpg)
-Test you setup before installing amount errors i found with hardware for instance bme280 sensor i orginally had this in a bread board wouldnt work kept getting eio errors yet wired directly fine so worth testing before you install in box.
+Test you setup before installing amount errors i found with hardware for instance bme280 sensor i orginally had this in a bread board wouldnt work kept getting eio errors yet wired directly fine so worth testing before you install in box. It's also worth testing out the vibration sensor because mine wasn't sensitive enough so by adjusted the screw on the sensor I found the sweet spot.
 
 ## Step 13 Install pico and sensors
 ![Install pico and sensors](picobox.jpg)
@@ -79,4 +79,4 @@ The drop bolt lock and siren work from 12v supply and using the relays to contro
 Powering the pico i got 12v to 5v dc to dc converter which is on its own circuit to 12v battery.
 
 ![Layout](layout.jpg)
-Here is layout. This stage you can also do finsihing touches like installing a handle setting up soft close lid support hinge to reduce slamming/shaking, lid ratting, lose wires potentially and it stops them opening the box right up leaning it against a wall not closing.
+Here is layout. This stage you can also do finishing touches like installing a handle setting up soft close lid support hinge to reduce slamming/shaking, lid ratting, lose wires potentially and it stops them opening the box right up leaning it against a wall not closing.
