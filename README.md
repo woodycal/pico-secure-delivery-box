@@ -31,6 +31,6 @@ Before you upload main.py make sure you change in main.py the WiFi credentials t
 ## How to control the box
 
 This is all done through web browser while connected to your local internet.
-!(Building-box/phoneshot.png)
+![Example](Building-box/phoneshot.png)
 
 If you need outside access ie not on home network I would advise a secure VPN of some kind to access your home network. This wasn't designed for being open to internet as I block my iot devices from internet.
