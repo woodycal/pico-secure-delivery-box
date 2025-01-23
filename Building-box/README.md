@@ -60,6 +60,23 @@ This stage can be tricky to do if weather is cold like it was in uk when i did t
 
 This stage can be tricky depending on type lock you get. I got electric drop bolt lock 12v from amazon which came in two parts [Amazon link](https://www.amazon.co.uk/LIBO-Electric-Electronic-Control-Security/dp/B07DW17J3Q/ref=sr_1_3?crid=3IMLO5TY7DW8C&dib=eyJ2IjoiMSJ9.hp2-itwyPUYHBJkAGXtzGxl7cBORglDBRUbYQpckPmc9WOuCHS1eXhC6ao8Yo6jCnItKoFeXaxsLDI9x0FOoczluv7sMgIcYGWtJ3Rzg98wND53W8JTD2CmEj2bEbKm1wl87hja0fNYtyToEtqWZSImI0eUMZtIWXg78s6UZm0SwW9PhYKXOubZoEPymGDgl2R3VeDV7jQN-EwN_8hxK6gqQQD8cuNf6WY_5Svq2c-ml-kG4rfwiejUSuTVRsCRkVPt7G3zcD3Eg0r-zuU_sxQHwqYaZiab0ZEOYoB-1H33oisJFurZfUgSz7PWrY2VXm-xuJ9r13BwGC7LCZtCJ5Q-tbDGtYkTdPOawtP_ydbUOnxM0t7EHgJyOKrLL1HeH2t3r9AjHXSWdzG3ewiGYn5-CPKJAPxeEOVc4tHjU0SD-H-a1pew6RCmiIraZKoqn.DI0taTb2DdbJ4WJ4xTMYhRsks2dMf-DbFepCZLddo_4&dib_tag=se&keywords=Electronic+dropbolt+lock+12v&qid=1737649583&sprefix=electronic+dropbolt+lock+12v%2Caps%2C76&sr=8-3). I installed an extra piece wood so electronic part of lock is set back and screwed on.
 
-![installing drop bolt lock part 2](plate_for_lock.jpg)
+![Installing drop bolt lock part 2](plate_for_lock.jpg)
 I took the second part of the lock apart to use the plate because the lock doesnt work without the magnet in place. I screwed this on to box and drilled out the hole so the drop bolt can extend into the frame.
 
+![Installing drop bolt lock part 3](dropboltlock3.jpg)
+Iv tested this lock its insanely strong. Also note it comes with 4 wires but in instructions only power works so yellow and white wire are redundant.
+
+## Step 12 Test your setup
+![Test your setup](test_setup.jpg)
+Test you setup before installing amount errors i found with hardware for instance bme280 sensor i orginally had this in a bread board wouldnt work kept getting eio errors yet wired directly fine so worth testing before you install in box.
+
+## Step 13 Install pico and sensors
+![Install pico and sensors](picobox.jpg)
+This is the stage you install waterproof boxs and install pico and sensors around the box. I installed bulk mine in the lid because its less wires interfering with moving parts as well leaves more room in bottom box for parcels. I decided to use 12v battery because orginally i was going to solar panel the top but the way uk is for sunshine in winter it wouldnt really work. You can also use mains supply using something like a 12v powersupply something i might end up doing once i see how long this 12v 5ah battery lasts still testing as i write this.
+
+The drop bolt lock and siren work from 12v supply and using the relays to control these circuits. Make sure you wire these circuits up so that 1. If you pico loses power it releases the drop bolt lock 2. If your pico loses power siren activates. Getting these wrong could leave you with a locked box and no way in!
+
+Powering the pico i got 12v to 5v dc to dc converter which is on its own circuit to 12v battery.
+
+![Layout](layout.jpg)
+Here is layout. This stage you can also do finsihing touches like installing a handle setting up soft close lid support hinge to reduce slamming/shaking, lid ratting, lose wires potentially and it stops them opening the box right up leaning it against a wall not closing.
