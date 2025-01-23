@@ -14,7 +14,7 @@ Please note I'm not professional programmer im a beginner hobbyist!. Designed to
 ### 2 Magnetic Door Contact Reed Switchs
 ### 1 12v Electric Drop Bolt Lock
 ### 12v siren
-### 12v battery
+### 12v battery or power supply
 
 Software: Micropython version 1.25.0 (https://micropython.org/resources/firmware/RPI_PICO2_W-20250119-v1.25.0-preview.217.gb4f53a0e5.uf2) and thonny for uploading the following files to Pico (main.py and bme280.py)
 
