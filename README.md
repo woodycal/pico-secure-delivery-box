@@ -3,6 +3,8 @@
 
 ![Box image 2](Building-box/IMG_20250123_120335198.jpg)
 
+![Box image 3](Building-box/layout.jpg)
+
 Please note I'm not a professional programmer; I'm a beginner hobbyist!. Designed to be simple and easy to understand with a lot of potential to grow. Originally wanted cameras and a keypad, but realistically delivery drivers just want to drop your parcel off as quickly as possible, so a drop box is more realistic.
 
 ## Item list:
