@@ -62,13 +62,13 @@ def webpage(weather_value, state):
             </form>
             <p>Weather Statisics: {weather_value}</p>
             <h2>Modes Explained</h2>
-            <b style="color:DarkRed;">ARMED:</b><strong>      This mode Locks the box and sets alarms active.<strong>
+            <b style="color:DarkRed;">ARMED:</b><strong>      This mode locks the box and actives the alarm.<strong>
             <br>
-            <b style="color:DarkRed;">DISARMED:</b><strong>      This mode disarms the box as well as unlocks(Acts as service mode).<strong>
+            <b style="color:DarkRed;">DISARMED:</b><strong>      This mode disarms and unlocks the box (Acts as service mode).<strong>
             <br>
-            <b style="color:DarkRed;">DROPOFFMODE:</b><strong>      This mode waits for box to be opened. Once opened a 180 second timer activates after which sets to ARMED mode(locks box sets alarm)<strong>
+            <b style="color:DarkRed;">DROPOFFMODE:</b><strong>      This mode waits for box to be opened. Once opened a 180 second timer activates after which is set to ARMED mode (locks box and activates alarm)<strong>
             <br>
-            <p>For future updates please check my github page <a href="https://github.com/woodycal/pico-secure-delivery-box">Here</a></p>
+            <p>For future updates please check my Github page <a href="https://github.com/woodycal/pico-secure-delivery-box">Here</a></p>
         </body>
         </html>
         """
