@@ -1,6 +1,8 @@
+#THIS IS FOR TESTING/DEBUGGING YOUR SETUP
+
 #Pico-Secure-Delivery-Box made by (woodycal @ github)(u/sac2727 @ reddit)
 #The code for asynchronous-web-server-micropython by https://randomnerdtutorials.com/raspberry-pi-pico-w-asynchronous-web-server-micropython/
-#
+
 # Import necessary modules
 import network
 import socket
@@ -10,7 +12,7 @@ import BME280
 from machine import Pin, I2C
 
 
-# pin setup
+# Pin setup
 led = Pin('LED', Pin.OUT)
 vibration_sensor = Pin(22, Pin.IN)
 relay_lock = Pin(14, Pin.OUT) #Note make sure to wire this correctly so if pico crashes it releases relay!
@@ -56,19 +58,19 @@ def webpage(weather_value, state):
             </form>
             <br>
             <p style="color:DarkRed;">Secure Box Status: {state}</p>
-            <h2>Fetch Weather Statisics</h2>
+            <h2>Fetch Weather Statistics</h2>
             <form action="./getweathervalue">
                 <input type="submit" value="Fetch Weather Stats" />
             </form>
             <p>Weather Statisics: {weather_value}</p>
             <h2>Modes Explained</h2>
-            <b style="color:DarkRed;">ARMED:</b><strong>      This mode Locks the box and sets alarms active.<strong>
+            <b style="color:DarkRed;">ARMED:</b><strong>      This mode locks the box and activates the alarm.<strong>
             <br>
-            <b style="color:DarkRed;">DISARMED:</b><strong>      This mode disarms the box as well as unlocks(Acts as service mode).<strong>
+            <b style="color:DarkRed;">DISARMED:</b><strong>      This mode disarms and unlocks the box (acts as service mode).<strong>
             <br>
-            <b style="color:DarkRed;">DROPOFFMODE:</b><strong>      This mode waits for box to be opened. Once opened a 180 second timer activates after which locks the box and sets the alarm.<strong>
+            <b style="color:DarkRed;">DROPOFFMODE:</b><strong>      This mode waits for the box to be opened. Once opened, a 180-second timer activates, after which it is set to ARMED mode (locks box and activates alarm).<strong>
             <br>
-            <p>For future updates please check my github page <a href="https://github.com/woodycal/pico-secure-delivery-box">Here</a></p>
+            <p>For future updates, please check my GitHub page. <a href="https://github.com/woodycal/pico-secure-delivery-box">Here</a></p>
         </body>
         </html>
         """
@@ -117,11 +119,13 @@ async def handle_client(reader, writer):
     
     # Process the request and update variables
     if request == '/ARMED?':
+        print('ARMED ACTIVATED')
         state = 'ARMED'
     elif request == '/DISARMED?':
+        print('DISARMED ACTIVATED')
         state = 'DISARMED'
     elif request == '/DROPOFFMODE?':
-        print('DROPOFFMODE ACTIVE')
+        print('DROPOFFMODE ACTIVATED')
         state = 'DROPOFFMODE'
         dropboxvalue = 0
         relay_lock.value(1)
@@ -147,7 +151,7 @@ async def handle_client(reader, writer):
     await writer.wait_closed()
     print('Client Disconnected')
 
-#logic for controlling box status modes
+#Logic for controlling box status modes
 async def Boxstatus():
     global state
     global vibrationcount
@@ -161,6 +165,7 @@ async def Boxstatus():
         startupcount += 1
         if startupcount == 4:
             state = "DISARMED"
+            print('Startup mode deactivated')
     elif state == 'ARMED':
         print('Box is Armed')
         relay_lock.value(0)
@@ -171,19 +176,20 @@ async def Boxstatus():
             print("Vibration detected!")
             vibrationcount += 1
             if vibrationcount == 6:
-                print("alarm trigger")
+                print("alarm triggered")
                 relay_lock.value(0)
                 relay_siren.value(1)
     elif state == 'DISARMED':
             relay_siren.value(0)
             relay_lock.value(1)
+            Print('Box is disarmed')
             time.sleep(2)
     elif state == 'DROPOFFMODE':
-        print('dropoffmode')
+        print('Box is in dropoffmode')
         if box_sensor.value() or box_sensor1.value() == 1:
-            print('startbox')
+            print('Sensor was triggered in dropoffmode')
             time.sleep(180)
-            print('box activated')
+            print('Box is now armed')
             state = "ARMED"
             
                     
