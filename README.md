@@ -9,14 +9,21 @@ Please note I'm not a professional programmer; I'm a beginner hobbyist!. Designe
 
 ## Item list:
 
-### Pico w or Pico 2w (Needs WiFi)
+### Pico W or Pico 2W (Needs WiFi)
+
 ### 2 relay modules
+
 ### 1 SW 420 vibration sensor
-### 1 BME 280 Temperature, Pressure, Humidity sensor
-### 2 Magnetic Door Contact Reed Switchs
-### 1 12v Electric Drop Bolt Lock
-### 12v siren
-### 12v battery or power supply
+
+### 1 BME 280 Temperature, Pressure, Humidity Sensor
+
+### 2 Magnetic Door Contact Reed Switches
+
+### 1 12V Electric Drop Bolt Lock
+
+### 12V siren
+
+### 12V battery or power supply
 
 Software: Micropython version 1.25.0 (https://micropython.org/resources/firmware/RPI_PICO2_W-20250119-v1.25.0-preview.217.gb4f53a0e5.uf2) and Thonny for uploading the following files to Pico (main.py and bme280.py)
 
