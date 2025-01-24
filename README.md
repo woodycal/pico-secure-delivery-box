@@ -11,7 +11,7 @@ Please note I'm not a professional programmer; I'm a beginner hobbyist!. Designe
 
 ### Pico W or Pico 2W (Needs WiFi)
 
-### 2 relay modules
+### 2 Relay modules
 
 ### 1 SW 420 vibration sensor
 
@@ -21,9 +21,9 @@ Please note I'm not a professional programmer; I'm a beginner hobbyist!. Designe
 
 ### 1 12V Electric Drop Bolt Lock
 
-### 12V siren
+### 12V Siren
 
-### 12V battery or power supply
+### 12V Battery or power supply
 
 Software: Micropython version 1.25.0 (https://micropython.org/resources/firmware/RPI_PICO2_W-20250119-v1.25.0-preview.217.gb4f53a0e5.uf2) and Thonny for uploading the following files to Pico (main.py and bme280.py)
 
