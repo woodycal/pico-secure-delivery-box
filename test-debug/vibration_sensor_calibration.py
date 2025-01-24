@@ -1,5 +1,5 @@
-#This is for calibrating SW 420 Vibration sensor
-#Run this program while shaking the sensor, you might need to adjust the screw on the sensor to increase or decrease sensityifity.
+#This is for calibrating the SW 420 vibration sensor.
+#Run this program while shaking the sensor; you might need to adjust the screw on the sensor to increase or decrease sensitivity.
 
 from machine import Pin
 import time
