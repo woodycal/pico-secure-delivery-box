@@ -5,10 +5,12 @@
 # Import necessary modules
 import time
 from machine import Pin
+
 # Pin setup
 relay_lock = Pin(14, Pin.OUT) #Note make sure to wire this correctly so if pico crashes it releases relay!
 relay_siren = Pin(15, Pin.OUT)
 
+# Variables
 startupcount = 0
 
 # set inital relay values
