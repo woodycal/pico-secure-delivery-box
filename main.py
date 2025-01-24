@@ -1,6 +1,6 @@
 #Pico-Secure-Delivery-Box made by (woodycal @ github)(u/sac2727 @ reddit)
 #The code for asynchronous-web-server-micropython by https://randomnerdtutorials.com/raspberry-pi-pico-w-asynchronous-web-server-micropython/
-#If you need to test or debug, please use the main.py in the test/debug folder
+#If you need to test or debug, please use the main.py in the test-debug folder
 
 # Import necessary modules
 import network
