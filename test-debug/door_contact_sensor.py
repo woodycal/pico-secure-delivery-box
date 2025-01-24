@@ -1,9 +1,9 @@
 #THIS IS FOR TESTING DOOR CONTACT SENSORS
-#Please make sure depending on type sensor you have its wired correctly
-#Some sensors are 2 way meaning they can have 3 wire points
-#The style I had has 3 wire points
-#You will need to wire both end points and leave the middle wire point redunant
-#Pulling the two parts apart will trigger value == 1
+#Please make sure, depending on the type of sensor you have, it's wired correctly.
+#Some sensors are 2-way, meaning they can have 3 wire points.
+#The style I had has 3 wire points.
+#You will need to wire both endpoints and leave the middle wire point redundant.
+#Pulling the two parts apart will trigger value == 1.
 
 #Import necessary modules
 import time
