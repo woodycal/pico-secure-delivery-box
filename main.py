@@ -1,5 +1,6 @@
 #Pico-Secure-Delivery-Box made by (woodycal @ github)(u/sac2727 @ reddit)
 #The code for asynchronous-web-server-micropython by https://randomnerdtutorials.com/raspberry-pi-pico-w-asynchronous-web-server-micropython/
+#If you need to test or debug, please use the main.py in the test/debug folder
 
 # Import necessary modules
 import network
@@ -10,16 +11,16 @@ import BME280
 from machine import Pin, I2C
 
 
-# pin setup
+# Pin setup
 led = Pin('LED', Pin.OUT)
 vibration_sensor = Pin(22, Pin.IN)
 relay_lock = Pin(14, Pin.OUT) #Note make sure to wire this correctly so if pico crashes it releases relay!
 relay_siren = Pin(15, Pin.OUT)
-box_sensor = Pin(12, Pin.IN, Pin.PULL_UP)# box sensor
+box_sensor = Pin(12, Pin.IN, Pin.PULL_UP)# Box sensor
 box_sensor1 = Pin(13, Pin.IN, Pin.PULL_UP)# Sensor for pico enclosure
 
 # Initialize I2C communication for bme280
-i2c = I2C(id=0, scl=Pin(1), sda=Pin(0), freq=10000) #For bme280 sensor
+i2c = I2C(id=0, scl=Pin(1), sda=Pin(0), freq=10000) #For BME280 sensor
 
 # Wi-Fi credentials
 ssid = 'YOURSSID'
@@ -56,19 +57,19 @@ def webpage(weather_value, state):
             </form>
             <br>
             <p style="color:DarkRed;">Secure Box Status: {state}</p>
-            <h2>Fetch Weather Statisics</h2>
+            <h2>Fetch Weather Statistics</h2>
             <form action="./getweathervalue">
                 <input type="submit" value="Fetch Weather Stats" />
             </form>
             <p>Weather Statisics: {weather_value}</p>
             <h2>Modes Explained</h2>
-            <b style="color:DarkRed;">ARMED:</b><strong>      This mode locks the box and actives the alarm.<strong>
+            <b style="color:DarkRed;">ARMED:</b><strong>      This mode locks the box and activates the alarm.<strong>
             <br>
-            <b style="color:DarkRed;">DISARMED:</b><strong>      This mode disarms and unlocks the box (Acts as service mode).<strong>
+            <b style="color:DarkRed;">DISARMED:</b><strong>      This mode disarms and unlocks the box (acts as service mode).<strong>
             <br>
-            <b style="color:DarkRed;">DROPOFFMODE:</b><strong>      This mode waits for box to be opened. Once opened a 180 second timer activates after which is set to ARMED mode (locks box and activates alarm)<strong>
+            <b style="color:DarkRed;">DROPOFFMODE:</b><strong>      This mode waits for the box to be opened. Once opened, a 180-second timer activates, after which it is set to ARMED mode (locks box and activates alarm).<strong>
             <br>
-            <p>For future updates please check my Github page <a href="https://github.com/woodycal/pico-secure-delivery-box">Here</a></p>
+            <p>For future updates, please check my GitHub page. <a href="https://github.com/woodycal/pico-secure-delivery-box">Here</a></p>
         </body>
         </html>
         """
@@ -136,7 +137,7 @@ async def handle_client(reader, writer):
     await writer.drain()
     await writer.wait_closed()
 
-#logic for controlling box status modes
+#Logic for controlling box status modes
 async def Boxstatus():
     global state
     global vibrationcount
