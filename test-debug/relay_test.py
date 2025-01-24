@@ -1,6 +1,6 @@
-#THIS IS FOR TESTING RELAYS
-# you will hear them click to signal a change
-# make sure you wire the external circuit up correctly so that if they powered the lock is either on or off 
+# THIS IS FOR TESTING RELAYS
+# You will hear them click to signal a change.
+# Make sure you wire the external circuit up correctly so that if they are powered, the lock is either on or off. 
 
 # Import necessary modules
 import time
@@ -33,6 +33,6 @@ while True:
     time.sleep(1)
     startupcount += 1
     if startupcount == 2:
-        print('startupcount hit 5 program close')
+        print('startupcount hit 2 program close')
         time.sleep(5)
         break
