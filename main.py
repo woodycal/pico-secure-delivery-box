@@ -45,7 +45,7 @@ def webpage(weather_value, state):
             <h1>Pico Secure Box</h1>
             <h2>Secure Box Controls</h2>
             <form action="./ARMED">
-                <input type="submit" value="ARMED" />
+                <input type="submit" value="ARMED MODE" />
             </form>
             <br>
             <form action="./DISARMED">
@@ -53,7 +53,7 @@ def webpage(weather_value, state):
             </form>
             <br>
             <form action="./DROPOFFMODE">
-            <input type="submit" value="DROPOFFMODE" />
+            <input type="submit" value="DROP OFF MODE" />
             </form>
             <br>
             <p style="color:DarkRed;">Secure Box Status: {state}</p>
@@ -63,11 +63,11 @@ def webpage(weather_value, state):
             </form>
             <p>Weather Statisics: {weather_value}</p>
             <h2>Modes Explained</h2>
-            <b style="color:DarkRed;">ARMED:</b><strong>      This mode locks the box and activates the alarm.<strong>
+            <b style="color:DarkRed;">ARMED MODE:</b><strong>      This mode locks the box and activates the alarm.<strong>
             <br>
-            <b style="color:DarkRed;">DISARMED:</b><strong>      This mode disarms and unlocks the box (acts as service mode).<strong>
+            <b style="color:DarkRed;">DISARMED MODE:</b><strong>      This mode disarms and unlocks the box (acts as service mode).<strong>
             <br>
-            <b style="color:DarkRed;">DROPOFFMODE:</b><strong>      This mode waits for the box to be opened. Once opened, a 180-second timer activates, after which it is set to ARMED mode (locks box and activates alarm).<strong>
+            <b style="color:DarkRed;">DROP OFF MODE:</b><strong>      This mode waits for the box to be opened. Once opened, a 180-second timer activates, after which it is set to ARMED mode (locks box and activates alarm).<strong>
             <br>
             <p>For future updates, please check my GitHub page. <a href="https://github.com/woodycal/pico-secure-delivery-box">Here</a></p>
         </body>
@@ -153,6 +153,7 @@ async def Boxstatus():
             state = "DISARMED"
     elif state == 'ARMED':
         relay_lock.value(0)
+        vibrationcount = 0
         if box_sensor.value() or box_sensor1.value() == 1:
             relay_siren.value(1)
         elif vibration_sensor.value() == 1:
