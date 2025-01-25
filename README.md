@@ -1,11 +1,11 @@
 # Pico Secure Delivery Box
-![How to build your own secure delivery box using a raspberry pi pico](Building-box/IMG_20250123_120316757.jpg)
+![How to build your own secure delivery box using a raspberry pi pico]()
 
-![Box image 2](Building-box/IMG_20250123_120335198.jpg)
+![Box image 2]()
 
-![Box image 3](Building-box/layout.jpg)
+![Box image 3]()
 
-Please note I'm not a professional programmer; I'm a beginner hobbyist!. Designed to be simple and easy to understand with a lot of potential to grow. Originally wanted cameras and a keypad, but realistically delivery drivers just want to drop your parcel off as quickly as possible, so a drop box is more realistic.
+Please note I'm not a professional programmer; I'm a beginner hobbyist!. Designed to be simple and easy to understand with a lot of potential to grow. Originally wanted cameras and a keypad, but realistically delivery drivers just want to drop your parcel off as quickly as possible, so a drop box is more realistic. I will be implementing a schedule in future updates.
 
 ## Item list:
 
