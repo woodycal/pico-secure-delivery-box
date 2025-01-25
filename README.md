@@ -1,7 +1,7 @@
 # Pico Secure Delivery Box
-![How to build your own secure delivery box using a raspberry pi pico](Building-box/main 1.jpg)
+![How to build your own secure delivery box using a raspberry pi pico](Building-box/main1.jpg)
 
-![Box image 2](Building-box/main 2.jpg)
+![Box image 2](Building-box/main2.jpg)
 
 ![Box image 3](Building-box/layout.jpg)
 
