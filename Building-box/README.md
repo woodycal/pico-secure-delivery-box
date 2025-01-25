@@ -2,11 +2,11 @@
 
 This guide is from start to finish how I went about building the box and issues that came across as well as helpful tips. Professionally, I am a landscape gardener, so the building side was easyish, but I did make a couple of mistakes along the process of building, as it's something I have never done before.
 
-![Front view](IMG_20250123_120316757.jpg)
+![Front view](main1.jpg)
 
-![Top view](IMG_20250123_120321885.jpg)
+![Top view](main2.jpg)
 
-![Inside view](IMG_20250123_120335198.jpg)
+![Inside view](inside.jpg)
 
 ![Layout](layout.jpg)
 
