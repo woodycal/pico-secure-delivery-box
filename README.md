@@ -25,7 +25,7 @@ Please note I'm not a professional programmer -  I'm a beginner hobbyist! This i
 
 ### 1x 12V Battery or power supply
 
-Software: Micropython version 1.25.0 (https://micropython.org/resources/firmware/RPI_PICO2_W-20250119-v1.25.0-preview.217.gb4f53a0e5.uf2) and Thonny for uploading the following files to the Pico (main.py and bme280.py)
+Software: Micropython version 1.25.0 (https://micropython.org/download/RPI_PICO2_W/) and Thonny for uploading the following files to the Pico (main.py and bme280.py)
 
 ## INSTRUCTIONS
 
