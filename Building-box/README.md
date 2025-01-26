@@ -92,3 +92,5 @@ This is optional but is advisable if you are placing the box on the ground. By a
 This stage is optional but advisable—there's no point in having a secure box if someone can just run off with it. There are many options to secure it, I went with a simple chain, but you could ultimately use ground anchor bolts or concrete-in wooden posts by the side of the box and screw it down with decking screws or something similar. You could also round off the decking screw heads to prevent unscrewing.
 
 Remember, if someone wants to get the box, there's not much you can do if they have tools like battery angle grinders, disc cutters, or bolt loppers. You could install hidden tracking devices like an AirTag in case it does go missing, but for me, given the cost of a Pico and other components, this seems extreme. Still, it’s an option.
+
+The main purpose I did this project wasn't about security really, I just wanted somewhere dry for parcels to be dropped and a fun coding project.
