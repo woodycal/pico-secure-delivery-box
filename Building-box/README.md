@@ -1,6 +1,8 @@
 # Guide how to build your own secure pico box
 
-This guide is a step-by-step account of how I built the box, including the issues I encountered along the way and some helpful tips. Professionally, I am a landscape gardener, so the building process was relatively straightforward for me, but I did make a couple of mistakes throughout the building process since this was something new for me. You can ultimately buy a delivery box from etsy and modify it.
+This guide is a step-by-step account of how I built the box, including the issues I encountered along the way and some helpful tips. Professionally, I am a landscape gardener, so the building process was relatively straightforward for me, but I did make a couple of mistakes throughout the building process since this was something new for me. 
+
+You can ultimately buy a delivery box from etsy if DIY isn't your thing and modify it.
 
 ![Front view](main1.jpg)
 
