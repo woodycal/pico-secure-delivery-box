@@ -1,7 +1,7 @@
 # Pico-Secure-Delivery-Box made by (woodycal @ github)(u/sac2727 @ reddit)
 # Few issues with this i havent been able to pin point as of yet.
 # 1. Their seems to be issue with npt time during start sometimes get an error, I assume its regarding connection as during testing i spammed and might have got blocked.
-# 2. Their is an issue if you spam client (tkinter) it can cause tkinter to lock up and sometimes locks up.
+# 2. Their is an issue if you spam client (tkinter) it can cause tkinter to lock up and sometimes locks up server.
 # I am unsure as of yet if this is down to async function in the server or an issue to do with tkinter (client) during testing or latency issue with wifi.
 # Ideally some parts of this code should be in threads but it isnt widely supported as of yet in micropython.
 
