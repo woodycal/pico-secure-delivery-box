@@ -1,3 +1,7 @@
+# made by woodycal
+# This client is designed only to work on full python, it will not work on Micropython!
+
+
 import tkinter as tk
 from tkinter import ttk
 import threading
@@ -5,7 +9,7 @@ import time
 import socket
 import json
 
-HOST = '192.168.1.100' #server host
+HOST = 'changeme' #server host
 PORT = 8080
 data_payload = 2048
 style = 'utf-8'
