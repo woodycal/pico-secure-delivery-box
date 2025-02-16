@@ -33,6 +33,7 @@ In main.py, please enter your Wi-Fi credentials. Please note that because the Pi
 In picoclient.py, you will need to enter the host IP address of the Pico W on your local network. It should look
 something like 192.168.0.2 (as shown by your router). Remember that if you change port numbers, you will need to
 adjust them in both main.py and picoclient.py. 
+
 **VERY IMPORTANT:** This will only work on normal Python. It will not work on MicroPython due to the limited libraries it has.
 
 ## Tkinter usage instructions
