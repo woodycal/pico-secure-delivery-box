@@ -56,4 +56,7 @@ You can use server web hosting.
 Or can use tkinter app which is a client and server communication which has schedule.
 ![Example](Building-box/tkinterscreenshot.png)
 
-If you need outside access, i.e. not on a home network, I would advise a secure VPN of some kind to access your home network. This wasn't designed for being open to the internet, as I block my IoT devices from the internet but can use them locally.
+##Outside access
+Now that I have created tkinter app you can run a vnc server and control it that way. With vnc you can log into server from alot or devices anywhere.if correctly setup!.
+
+If you prefer the web server setup you will have to use a VPN of some kind to to access your home network(something like wireguard).
