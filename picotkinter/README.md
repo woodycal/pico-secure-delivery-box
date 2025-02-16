@@ -36,12 +36,15 @@ Also VERY IMPORTANT this will only work on normal python, It will not work on mi
 
 ## Tkinter usage instructions
 ### Left side buttons
-Armed button sends command to set box in ARMED mode
-Disarmed button sends command to set box in DISARMED mode
-Dropoffmode button sends command to set box in DROPOFFMODE mode
-Weatherstatistics button sends command to set GETWEATHERSTATS mode (Gets current weather stats)
+####Armed: button sends command to set box in ARMED mode
 
-Get Box Status gets the current state of the box if its ARMED, DISARMED, DROPOFFMODE or rarely unless clicked at the start STARTUP
+####Disarmed: button sends command to set box in DISARMED mode
+
+####Dropoffmode: button sends command to set box in DROPOFFMODE mode
+
+####Weatherstatistics: button sends command to set GETWEATHERSTATS mode (Gets current weather stats)
+
+####Get Box Status: gets the current state of the box if its ARMED, DISARMED, DROPOFFMODE or rarely unless clicked at the start STARTUP
 
 ### Right side schedule
 The way schedule works is you select your time, mode and very important the schedule number and submit. It will store these server side so for instance if you send two schedule 1s the last scedule 1
