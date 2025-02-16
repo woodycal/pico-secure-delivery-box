@@ -27,33 +27,36 @@ Software: Micropython version 1.25.0 (https://micropython.org/download/RPI_PICO2
 main.py BME280.py and npttime.py to the pico 2 w
 
 ### main.py
-In main.py please enter your Wi-Fi credentials, Please note that because the pico 2 w uses npttime.py during startup to fetch current time, you will need to allow access to the internet.
+In main.py, please enter your Wi-Fi credentials. Please note that because the Pico W uses ntptime.py during startup to fetch the current time, you will need to allow access to the internet.
 
 ### picoclient.py
-In picoclient.py you will need to enter the host ip address of the pico 2 w on your local network, It should look like something 192.168.0.2 from your router. 
-Remeber if you change port numbers you will need to adjust them in both main.py and picoclient.py
-Also VERY IMPORTANT this will only work on normal python, It will not work on micropython due to the limited libraries it has.
+In picoclient.py, you will need to enter the host IP address of the Pico W on your local network. It should look
+something like 192.168.0.2 (as shown by your router). Remember that if you change port numbers, you will need to
+adjust them in both main.py and picoclient.py. 
+**VERY IMPORTANT:** This will only work on normal Python. It will not work on MicroPython due to the limited libraries it has.
 
 ## Tkinter usage instructions
 ### Left side buttons
-Armed: button sends command to set box in ARMED mode
-
-Disarmed: button sends command to set box in DISARMED mode
-
-Dropoffmode: button sends command to set box in DROPOFFMODE mode
-
-Weatherstatistics: button sends command to set GETWEATHERSTATS mode (Gets current weather stats)
-
-Get Box Status: gets the current state of the box if its ARMED, DISARMED, DROPOFFMODE or rarely unless clicked at the start STARTUP
+- **Armed**: Button sends a command to set the box in ARMED mode.
+- **Disarmed**: Button sends a command to set the box in DISARMED mode.
+- **Dropoffmode**: Button sends a command to set the box in DROPOFFMODE mode.
+- **Weatherstatistics**: Button sends a command to set GETWEATHERSTATS mode (Gets current weather stats).
+- **Get Box Status**: Gets the current state of the box if it's ARMED, DISARMED, DROPOFFMODE, or rarely STARTUP during booting process.
 
 ### Right side schedule
-The way schedule works is you select your time, mode and very important the schedule number and submit. It will store these server side so for instance if you send two schedule 1s the last scedule 1
-you send will update with new parameters. Their is a maximum 4 schedules that can be set and these are permanent unless you press clear schedules button or for some reason the pico soft resets.
+The way the schedule works is as follows:
+1. Select your time, mode, and very importantly, the schedule number before submitting.
+2. It will store these server-side, so if you send two schedule 1s, the last schedule 1 you send will update with the new parameters.
+3. There is a maximum of 4 schedules that can be set, and these are permanent unless you press the "Clear Schedules" button or for some reason the Pico soft resets.
 
 ### Current issues
-Their is some issues i havent yet managed to pin point which causes sometimes the tkinter app to lock up or the pico server. I havent managed yet to find out what is doing it, It could be related to the way async works on the server which really needs to be threaded but isnt widely supported on micropython. Or it could be related to tkinter app i cant really figure it out atm as it seems to be both thats doing it.
+There are some issues I haven't yet managed to pinpoint, which cause sometimes the Tkinter app to lock up or the
+Pico server. I haven't managed yet to find out what is causing it. It could be related to the way async works on
+the server, which really needs to be threaded but isn't widely supported on MicroPython. Or it could be related to
+the Tkinter app, I can't really figure it out at the moment as it seems to be both that are causing the issue.
 
-Their is also an issue with ntptime.py which i believe during testing was because i was spamming their servers and either a temp ban or limited on requests per min???.
+There is also an issue with ntptime.py, which I believe during testing was because I was spamming their servers,
+and either got a temporary ban or ran into request limits per minute.
 
 
 
