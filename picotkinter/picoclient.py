@@ -119,7 +119,7 @@ class ThreadedApp:
         sock.connect(server_address)
         sock.send("CLEARSCHEDULES".encode())
         sock.close()
-        self.status_label.config(text=f"Box is now: {data1main}")
+        self.submitted_data_label.config(text="Schedules Removed")
 
 
 
