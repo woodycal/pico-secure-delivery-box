@@ -5,7 +5,11 @@
 
 ![Box image 3](Building-box/layout.jpg)
 
-Please note I'm not a professional programmer -  I'm a beginner hobbyist! This is designed to be simple and easy to understand with potential to grow. I originally wanted cameras and a keypad, but realistically delivery drivers just want to drop your parcel off as quickly as possible, so a drop box is more realistic. I will be implementing a schedule in future updates.
+Please note I'm not a professional programmer -  I'm a beginner hobbyist! This is designed to be simple and easy to understand with potential to grow. I originally wanted cameras and a keypad, but realistically delivery drivers just want to drop your parcel off as quickly as possible, so a drop box is more realistic. I have for now implemented schedule functions into a tkinter app please refer their if its a function you need. Reason for this is that i already have an alarm system setup in tkinter for some barns quite far away from the house with a client server communication.
+
+Detailed guide how to use tkinter client [Click here](picotkinter/README.md)
+
+Detailed guide on how to build your own secure delivery box from scratch [Click here](Building-box/README.md)
 
 ## Item list:
 
@@ -49,6 +53,7 @@ BME280.py
 This is all done through a web browser while connected to your local internet.
 ![Example](Building-box/phoneshot.png)
 
-If you need outside access, i.e. not on a home network, I would advise a secure VPN of some kind to access your home network. This wasn't designed for being open to the internet, as I block my IoT devices from the internet but can use them locally.
+This is the tkinter app which is a client and server communication.
+![Example](Building-box/tkinterscreenshot.png)
 
-Detailed guide on how to build your own secure delivery box from scratch [Click here](Building-box/README.md)
+If you need outside access, i.e. not on a home network, I would advise a secure VPN of some kind to access your home network. This wasn't designed for being open to the internet, as I block my IoT devices from the internet but can use them locally.
