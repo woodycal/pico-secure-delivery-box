@@ -34,7 +34,9 @@ In picoclient.py, you will need to enter the host IP address of the Pico W on yo
 something like 192.168.0.2 (as shown by your router). Remember that if you change port numbers, you will need to
 adjust them in both main.py and picoclient.py. 
 
-**VERY IMPORTANT:** This will only work on normal Python. It will not work on MicroPython due to the limited libraries it has.
+**VERY IMPORTANT:** This will only work on normal Python. It will not work on MicroPython due to the limited libraries it has. 
+
+This client works best on a raspberry pi with a touchscreen of some kind.
 
 ## Tkinter usage instructions
 ### Left side buttons
