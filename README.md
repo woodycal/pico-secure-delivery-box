@@ -56,9 +56,9 @@ You can use server web hosting.
 Or can use tkinter app which is a client and server communication which has schedule.
 ![Example](Building-box/tkinterscreenshot.png)
 
-I have tested both the options above combined and it does work running two servers from Pico w but for GitHub I think it's best we keep them separate.
+I have tested both the options above combined and it does work running two servers from Pico 2 w and I will add this when it's ready. I find having both options it's handy if your not next to your tkinter client to open the box.
 
 ## Outside access
-Now that I have created tkinter app you can run a vnc server and control it that way. With vnc you can log into server from alot or devices anywhere, If correctly setup!.
+Now that I have created tkinter app you can run a vnc server and control it that way. With vnc you can log into server from alot of devices anywhere.
 
 If you prefer the web server setup you will have to use a VPN of some kind to to access your home network(something like wireguard).
