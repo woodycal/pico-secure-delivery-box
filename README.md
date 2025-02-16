@@ -48,12 +48,12 @@ BME280.py
 
 ### DROPOFFMODE: This mode starts off unlocked, but once the box sensor is tripped (box opened), it starts a countdown of 3 mins (180 secs), after which it goes into armed mode, so it locks the box and activates sensors.
 
-## How to control the box:
+## How to control the box 2 ways:
 
-This is all done through a web browser while connected to your local internet.
+You can use server web hosting.
 ![Example](Building-box/phoneshot.png)
 
-This is the tkinter app which is a client and server communication.
+Or can use tkinter app which is a client and server communication which has schedule.
 ![Example](Building-box/tkinterscreenshot.png)
 
 If you need outside access, i.e. not on a home network, I would advise a secure VPN of some kind to access your home network. This wasn't designed for being open to the internet, as I block my IoT devices from the internet but can use them locally.
