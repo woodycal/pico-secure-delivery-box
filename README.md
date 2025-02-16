@@ -56,6 +56,8 @@ You can use server web hosting.
 Or can use tkinter app which is a client and server communication which has schedule.
 ![Example](Building-box/tkinterscreenshot.png)
 
+I have tested both the options above combined and it does work running two servers from Pico w but for GitHub I think it's best we keep them separate.
+
 ## Outside access
 Now that I have created tkinter app you can run a vnc server and control it that way. With vnc you can log into server from alot or devices anywhere, If correctly setup!.
 
