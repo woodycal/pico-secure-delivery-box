@@ -56,7 +56,7 @@ You can use server web hosting.
 Or can use tkinter app which is a client and server communication which has schedule.
 ![Example](Building-box/tkinterscreenshot.png)
 
-##Outside access
+## Outside access
 Now that I have created tkinter app you can run a vnc server and control it that way. With vnc you can log into server from alot or devices anywhere.if correctly setup!.
 
 If you prefer the web server setup you will have to use a VPN of some kind to to access your home network(something like wireguard).
