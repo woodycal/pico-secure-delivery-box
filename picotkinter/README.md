@@ -1,5 +1,5 @@
 # Pico Secure Delivery Box
-![Setup guide](Building-box/tkinterscreenshot.png)
+![Setup guide](/Building-box/tkinterscreenshot.png)
 
 ## Item list:
 
