@@ -1,9 +1,6 @@
 # Pico-Secure-Delivery-Box made by (woodycal @ github)(u/sac2727 @ reddit)
-# Few issues with this i havent been able to pin point as of yet.
-# 1. Their seems to be issue with npt time during start sometimes get an error, I assume its regarding connection as during testing i spammed and might have got blocked.
-# 2. Their is an issue if you spam client (tkinter) it can cause tkinter to lock up and sometimes locks up.
-# I am unsure as of yet if this is down to async function in the server or an issue to do with tkinter (client) during testing or latency issue with wifi.
-# Ideally some parts of this code should be in threads but it isnt widely supported as of yet in micropython.
+# Note this now needs access to internet during start up to update time due to ntptime module.
+# Sections you need to fill in are ssid and password of your wifi.
 
 # Import necessary modules
 import asyncio
@@ -42,6 +39,7 @@ schedule2 = {}
 schedule3 = {}
 schedule4 = {}
 
+#Wifi connection during startup
 def init_wifi(ssid, password):
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
@@ -71,46 +69,31 @@ async def handle_client(reader, writer):
     while True:
         data = await reader.read(1024)
         if not data:
-            break
+            break  
+
         message = data.decode().strip()
         print(f"Received \"{message}\" from {writer.get_extra_info('peername')}")
-        
+
         if message == 'ARMED':
             state = 'ARMED'
             print(f"Send: {state!r}")
             writer.write(state.encode())
-            await writer.drain()
-            print("Close the connection")
-            writer.close()
-            writer.wait_closed()
         elif message == 'DISARMED':
             state = 'DISARMED'
             dropboxvalue = 0
             relay_lock.value(1)
             print(f"Send: {state!r}")
             writer.write(state.encode())
-            await writer.drain()
-            print("Close the connection")
-            writer.close()
-            writer.wait_closed()
         elif message == 'DROPOFFMODE':
             state = 'DROPOFFMODE'
             dropboxvalue = 0
             relay_lock.value(1)
             print(f"Send: {state!r}")
             writer.write(state.encode())
-            await writer.drain()
-            print("Close the connection")
-            writer.close()
-            writer.wait_closed()
         elif message == 'getweathervalue':
             weather_value = "Example Weather Value"
             print(f"Send: {weather_value!r}")
             writer.write(weather_value.encode())
-            await writer.drain()
-            print("Close the connection")
-            writer.close()
-            writer.wait_closed()
         elif message.startswith('schedule'):
             schedule_data = parse_schedule(message)
             if schedule_data:
@@ -119,20 +102,24 @@ async def handle_client(reader, writer):
         elif message.startswith('GETSTATE'):
             print(f"Send: {state!r}")
             writer.write(state.encode())
-            await writer.drain()
-            print("Close the connection")
-            writer.close()
-            writer.wait_closed()
         elif message.startswith('CLEARSCHEDULES'):
             schedule1 = {}
             schedule2 = {}
             schedule3 = {}
-            schedule1 = {}
+            schedule4 = {}
+            print("Cleared schedules")
+        elif message == 'CLOSE':
+            print("Close the connection")
+            break  
         else:
             print(f"Unknown command: {message}")
-            
+
+    await writer.drain()  
+    writer.close()
+    await writer.wait_closed()
+
+# Extract the JSON part from the message
 def parse_schedule(message):
-    # Extract the JSON part from the message
     try:
         start_index = message.find('{')
         end_index = message.rfind('}') + 1
@@ -140,13 +127,14 @@ def parse_schedule(message):
             raise ValueError("No valid JSON found in the message.")
         
         json_data = message[start_index:end_index]
-        print(f"Extracted JSON: {json_data}")  # Debugging line
+        print(f"Extracted JSON: {json_data}")  
         
         return json.loads(json_data)
     except (ValueError, IndexError) as e:
         print(f"Failed to parse schedule: {e}")
         return None
 
+# Stores schedules to global in the correct order
 def store_schedule(schedule_data):
     global schedule1, schedule2, schedule3, schedule4
     # Extract the schedule number from the schedule key
@@ -163,7 +151,8 @@ def store_schedule(schedule_data):
         schedule4 = schedule_data
     else:
         print(f"Invalid schedule number: {schedule_number}")
- 
+        
+# Handles the logic of the box
 async def Boxstatus():
     global state, vibrationcount, startupcount
     print(state)
@@ -252,7 +241,7 @@ async def main():
     # Update time from npt server # refer to top theirs a bug here
     ntptime.settime()
     thetime = time.localtime()
-    print(thetime)
+    print(thetime) 
 
     # Start the server and run the event loop
     server = asyncio.start_server(handle_client, "0.0.0.0", 8080)
