@@ -1,3 +1,5 @@
+# This is from https://github.com/micropython/micropython-lib/blob/master/micropython/net/ntptime/ntptime.py
+
 from time import gmtime
 import socket
 import struct
